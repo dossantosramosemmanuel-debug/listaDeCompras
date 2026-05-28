@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <h1>Lista de Compras</h1>
+      <p>Adicione, marque e remova itens da sua lista.</p>
+    </header>
+
+    <section class="form-panel">
+      <label for="item-input">Novo item</label>
+      <div class="input-group">
+        <input id="item-input" type="text" placeholder="Ex: arroz, leite, frutas" />
+        <input id="price-input" type="number" min="0" step="0.01" placeholder="Preço (R$)" />
+        <button id="add-button">Adicionar</button>
+      </div>
+    </section>
+
+    <section class="list-panel">
+      <h2>Itens</h2>
+      <ul id="shopping-list" class="shopping-list"></ul>
+      <div class="total-panel">
+        <span>Total se OK:</span>
+        <strong id="total-price">R$ 0,00</strong>
+      </div>
+      <div class="actions-row">
+        <button id="clear-completed">Limpar concluídos</button>
+        <button id="clear-all" class="danger">Limpar tudo</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
